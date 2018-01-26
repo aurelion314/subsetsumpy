@@ -1,5 +1,4 @@
-import numpy as np
-starting_nums = np.array([1,3,-6,-3,7,3,23,4])
+starting_nums = [1,3,-6,-3,7,3,23,4]
 goal_summ = -2
 
 starting_nums = sorted(starting_nums)
