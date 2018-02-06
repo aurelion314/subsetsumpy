@@ -22,7 +22,9 @@ def sum_recursion_may_be_required(nums, summ, level):
     if len(nums) > 1: 
         #We failed to match with a single value. We need more terms, so lets remove the smallest value from our sum, remove it from the list of numbers, then call the attempt again in a recursive manner
         rest = sum_recursion_may_be_required(nums[1::],summ-nums[0], level+1)
+        #If a match is found in a lower level it is returned. Adding it to what we just removed should equal the goal. 
         if nums[0]+rest == summ:
+            #Horray! Return again in order to dig out of this recursive hole.
             answer.append(nums[0])
             return summ
 
