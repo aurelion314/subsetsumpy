@@ -1,13 +1,15 @@
 import math
 
 
-"""
-    Finds all subsets of a given set of numbers that sum to a given target.
-    @argument: target - the target sum
-    @argument: nums - the set of numbers to find subsets of
-    @argument: n (optional) - the number of numbers to use in the sum
-"""
 def find_sums(target, nums, n=None):
+    """
+    Finds all subsets of a given set of numbers that sum to a given target.
+    
+    @param target:  the target sum
+    @param nums: the set of numbers to find subsets of
+    @param n: (optional) the number of numbers to use in the sum
+    """
+    
     S = SubsetSum(target, nums)
     if not n:
         return S.find_all_sums()
